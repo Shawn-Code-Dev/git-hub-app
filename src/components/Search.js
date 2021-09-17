@@ -1,10 +1,14 @@
 import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
-import GithubContext from '../context/github/GithubContext'
+import GithubContext from '../context/github/githubContext'
+import AlertContext from '../context/alert/alertContext'
 
-const Search = ({  setAlert }) => {
+const Search = () => {
   const githubContext = useContext(GithubContext);
-  const {users, clearUserList} = githubContext
+  const {users, clearUserList} = githubContext;
+
+  const alertContext = useContext(AlertContext);
+  const { setAlert } = alertContext;
 
   const [text, setText] = useState('')
 
