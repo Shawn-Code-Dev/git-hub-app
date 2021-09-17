@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react'
 import Spinner from './Spinner';
-import PropTypes from 'prop-types'
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Repos from './Repos';
@@ -84,14 +83,6 @@ const UserInfo = ({ match }) => {
       <Repos repos={repos} />
     </Fragment>
   )
-}
-
-UserInfo.propTypes = {
-  loading: PropTypes.bool,
-  user: PropTypes.object.isRequired,
-  getUser: PropTypes.func.isRequired,
-  getUserRepos: PropTypes.func.isRequired,
-  repos: PropTypes.array.isRequired
 }
 
 export default UserInfo

@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react'
-import PropTypes from 'prop-types'
 import GithubContext from '../context/github/githubContext'
 import AlertContext from '../context/alert/alertContext'
 
@@ -33,10 +32,6 @@ const Search = () => {
         {users.length > 0 && (<button className='btn btn-light btn-block' onClick={clearUserList}>Clear</button>)}
       </div>
     )
-}
-
-Search.propTypes = {
-  setAlert: PropTypes.func.isRequired
 }
 
 export default Search
