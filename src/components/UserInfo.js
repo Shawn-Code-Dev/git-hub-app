@@ -7,6 +7,7 @@ import Repos from './Repos';
 import GithubContext from '../context/github/githubContext';
 
 
+
 const UserInfo = ({ match }) => {
   const githubContext = useContext(GithubContext);
   const { getUser, user, getUserRepos, loading, repos } = githubContext;
