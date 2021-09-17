@@ -114,6 +114,12 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  transition:all 0.1s;
+}
+
+.user-card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* List */

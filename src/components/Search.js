@@ -1,42 +1,38 @@
-import React, { Component } from 'react'
+import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
+import GithubContext from '../context/github/GithubContext'
 
-class Search extends Component {
-  state = {
-    text: ''
-  }
+const Search = ({  setAlert }) => {
+  const githubContext = useContext(GithubContext);
+  const {users, clearUserList} = githubContext
 
-  static propTypes = {
-    searchUser: PropTypes.func.isRequired,
-    clearUserList: PropTypes.func.isRequired,
-    showClear: PropTypes.bool.isRequired,
-    setAlert: PropTypes.func.isRequired
-  }
+  const [text, setText] = useState('')
 
-  handleSearch = (e) => this.setState({[e.target.name]: e.target.value})
+  const handleSearch = (e) => setText(e.target.value)
   
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if(this.state.text === ''){
-      this.props.setAlert('Search field cannot be empty', 'light')
+    if(text === ''){
+      setAlert('Search field cannot be empty', 'light')
     } else {
-      this.props.searchUser(this.state.text)
-      this.setState({text:''})
+      githubContext.searchUser(text)
+      setText('')
     }
   }
 
-  render() {
-    const {showClear, clearUserList} = this.props;
     return (
       <div>
-        <form className="form" onSubmit={this.handleSubmit}>
-          <input type="text" name="text" placeholder="Find a user..." value={this.state.text} onChange={this.handleSearch} />
+        <form className="form" onSubmit={handleSubmit}>
+          <input type="text" name="text" placeholder="Find a user..." value={text} onChange={handleSearch} />
           <input type="submit" value="Search" className="btn btn-dark btn-block" />
         </form>
-        {showClear && (<button className='btn btn-light btn-block' onClick={clearUserList}>Clear</button>)}
+        {users.length > 0 && (<button className='btn btn-light btn-block' onClick={clearUserList}>Clear</button>)}
       </div>
     )
-  }
+}
+
+Search.propTypes = {
+  setAlert: PropTypes.func.isRequired
 }
 
 export default Search
