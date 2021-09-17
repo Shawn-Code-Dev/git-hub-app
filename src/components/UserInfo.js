@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import Repos from './Repos';
-import GithubContext from '../context/github/githubContext';
+import GithubContext from './../context/github/githubContext';
 
 
 
