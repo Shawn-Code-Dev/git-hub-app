@@ -1,7 +1,7 @@
 import './App.css';
 
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -22,12 +22,12 @@ const App = () => {
             <Navbar icon='fab fa-github' title='Gitbook App'/>
               <div className="container">
                 <Alert />
-                <Switch>
-                  <Route exact path='/' component={Home}/>
-                  <Route exact path='/about' component={About} />
-                  <Route exact path='/user/:login' component={UserInfo}/>
-                  <Route component={NotFound} />
-                </Switch> 
+                <Routes>
+                  <Route path='/' element={<Home />}/>
+                  <Route path='/about' element={<About />} />
+                  <Route path='/user/:login' element={<UserInfo />}/>
+                  <Route element={<NotFound />} />
+                </Routes> 
               </div>
           </div>
         </Router>
