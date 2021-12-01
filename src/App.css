@@ -318,6 +318,12 @@ input {
   margin: 1.2rem 0;
 }
 
+.error {
+  position: absolute;
+  color: red;
+  font-size: 0.6rem;
+}
+
 .form-text {
   display: block;
   margin-top: 0.3rem;

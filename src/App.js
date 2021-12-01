@@ -4,10 +4,11 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+import Home from './components/pages/Home';
+import Registration from './components/pages/Registration';
 import Alert from './components/Alert'
-import About from './components/About';
-import UserInfo from './components/UserInfo';
+import About from './components/pages/About';
+import UserInfo from './components/user/UserInfo';
 
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
@@ -26,6 +27,7 @@ const App = () => {
                   <Route path='/' element={<Home />}/>
                   <Route path='/about' element={<About />} />
                   <Route path='/user/:login' element={<UserInfo />}/>
+                  <Route path='/register' element={<Registration />} />
                   <Route element={<NotFound />} />
                 </Routes> 
               </div>

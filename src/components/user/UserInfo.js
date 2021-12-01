@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
-import Spinner from './Spinner';
+import Spinner from '../Spinner';
 import { Fragment } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Repos from './Repos';
-import GithubContext from './../context/github/githubContext';
+import GithubContext from '../../context/github/githubContext';
 
 
 

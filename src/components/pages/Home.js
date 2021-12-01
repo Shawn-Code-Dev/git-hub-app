@@ -1,6 +1,6 @@
 import React from 'react';
-import Search from './Search';
-import UserList from './UserList';
+import Search from '../Search';
+import UserList from '../user/UserList';
 
 const Home = () => (
     <>
