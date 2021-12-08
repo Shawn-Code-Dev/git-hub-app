@@ -13,6 +13,7 @@ import UserInfo from './components/user/UserInfo';
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
 import NotFound from './components/NotFound';
+import Login from './components/pages/Login';
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
                   <Route path='/about' element={<About />} />
                   <Route path='/user/:login' element={<UserInfo />}/>
                   <Route path='/register' element={<Registration />} />
+                  <Route path='/login' element={<Login />} />
                   <Route element={<NotFound />} />
                 </Routes> 
               </div>
