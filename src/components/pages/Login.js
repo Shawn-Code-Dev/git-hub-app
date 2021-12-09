@@ -16,7 +16,7 @@ const Login = () => {
     >
       {formik => (
         <div>
-          <h1>Register</h1>
+          <h1>Login</h1>
           <Form className="form">
             <FormField label='Username' name='username' type='text' />
             <FormField label='Password' name='password' type='password' />
