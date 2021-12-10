@@ -19,12 +19,12 @@ const Registration = () => {
       {formik => (
         <div>
           <h1>Register</h1>
-          <Form className="form">
+          <Form className='form'>
             <FormField label='Email' name='email' type='email' />
             <FormField label='Username' name='username' type='text' />
             <FormField label='Password' name='password' type='password' />
             <FormField label='Confirm Password' name='confirmPassword' type='password' />
-            <input type="submit" value="Submit" className="btn btn-dark btn-block" />
+            <input type='submit' value='Submit' className='btn btn-dark btn-block' />
           </Form>
         </div>
       )}

@@ -29,11 +29,11 @@ const Search = () => {
 
     return (
       <div>
-        <form className="form" onSubmit={handleSubmit}>
-          <input type="text" name="text" placeholder="Find a user..." value={text} onChange={handleSearch} />
-          <input type="submit" value="Search" className={`btn btn-block ${darkMode ? "btn-light" : "btn-dark"}`} />
+        <form className='form' onSubmit={handleSubmit}>
+          <input type='text' name='text' placeholder='Find a user...' value={text} onChange={handleSearch} />
+          <input type='submit' value='Search' className={`btn btn-block ${darkMode ? 'btn-light' : 'btn-dark'}`} />
         </form>
-        {users.length > 0 && (<button className={`btn btn-block ${darkMode ? "btn-light" : "btn-dark"}`} onClick={clearUserList}>Clear</button>)}
+        {users.length > 0 && (<button className={`btn btn-block ${darkMode ? 'btn-light' : 'btn-dark'}`} onClick={clearUserList}>Clear</button>)}
       </div>
     )
 }

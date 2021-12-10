@@ -17,10 +17,10 @@ const Login = () => {
       {formik => (
         <div>
           <h1>Login</h1>
-          <Form className="form">
+          <Form className='form'>
             <FormField label='Username' name='username' type='text' />
             <FormField label='Password' name='password' type='password' />
-            <input type="submit" value="Submit" className="btn btn-dark btn-block" />
+            <input type='submit' value='Submit' className='btn btn-dark btn-block' />
           </Form>
         </div>
       )}

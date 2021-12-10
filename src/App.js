@@ -19,7 +19,7 @@ const App = () => {
   const { darkMode } = themeContext
   return (
           <Router>
-            <div className={`App ${darkMode ? "bg-dark" : "bg-light"}`}>
+            <div className={`App ${darkMode ? 'bg-dark' : 'bg-light'}`}>
               <Navbar icon='fab fa-github' title='Gitbook App'/>
                 <div className='container'>
                   <Alert />
