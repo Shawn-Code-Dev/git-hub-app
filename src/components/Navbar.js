@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = ({ icon, title }) => {
 
@@ -22,6 +22,7 @@ const Navbar = ({ icon, title }) => {
           <li>
             <Link to='/about'>About</Link>
           </li>
+          <ThemeToggle />
         </ul>
       </nav>
     );
@@ -30,11 +31,6 @@ const Navbar = ({ icon, title }) => {
 Navbar.defaultProps = {
   title: 'Github App',
   icon: 'fab fa-github'
-}
-
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
 }
 
 export default Navbar

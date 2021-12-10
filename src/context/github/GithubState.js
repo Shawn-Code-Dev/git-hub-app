@@ -1,7 +1,7 @@
-import React, { useReducer } from "react";
+import React, { useReducer } from 'react';
 import axios from 'axios';
-import GithubContext from "./githubContext";
-import GithubReducer from "./githubReducer";
+import GithubContext from './githubContext';
+import GithubReducer from './githubReducer';
 import{
   SEARCH_USERS,
   GET_USER,
@@ -29,9 +29,9 @@ const GithubState = props => {
     loading: false
   }
 
-  const [state, dispatch] = useReducer(GithubReducer, initialState);
+  const [state, dispatch] = useReducer(GithubReducer, initialState)
 
-  const setLoading = () => dispatch({ type: SET_LOADING });
+  const setLoading = () => dispatch({ type: SET_LOADING })
 
   const clearUserList = () => dispatch({ type: CLEAR_USERS })
 
@@ -50,7 +50,7 @@ const GithubState = props => {
   const getUserRepos = async (login) => {
     setLoading();
     const response = await axios.get(`https://api.github.com/users/${login}/repos?per_page=5&sort=created:asc&client_id=${githubClientId}&client_secret=${githubClientSecret}`);
-    dispatch({ type:GET_REPOS, payload:response.data });
+    dispatch({ type:GET_REPOS, payload:response.data })
   }
 
   return (<GithubContext.Provider value={{
@@ -67,4 +67,4 @@ const GithubState = props => {
   </GithubContext.Provider>)
 }
 
-export default GithubState;
+export default GithubState
