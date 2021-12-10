@@ -5,7 +5,7 @@ import ThemeReducer from './themeReducer'
 
 const ThemeState = props => {
   const initialState = {
-    darkMode: false
+    darkMode: localStorage.getItem('darkMode')
   }
 
   const [state, dispatch] = useReducer(ThemeReducer, initialState)

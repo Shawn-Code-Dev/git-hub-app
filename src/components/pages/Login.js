@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Formik, Form } from 'formik'
 import FormField from '../FormField'
 import loginSchema from '../../schemas/loginSchema'
+import ThemeContext from '../../context/theme/themeContext'
 
 const Login = () => {
-  
+  const themeContext = useContext(ThemeContext)
+  const { darkMode } = themeContext
+
   return (
     <Formik
       initialValues={{
@@ -20,7 +23,7 @@ const Login = () => {
           <Form className='form'>
             <FormField label='Username' name='username' type='text' />
             <FormField label='Password' name='password' type='password' />
-            <input type='submit' value='Submit' className='btn btn-dark btn-block' />
+            <input type='submit' value='Submit' className={`btn btn-block ${darkMode ? 'btn-light' : 'btn-dark'}`} />
           </Form>
         </div>
       )}
