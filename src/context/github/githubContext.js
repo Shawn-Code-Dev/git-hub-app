@@ -1,5 +1,5 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 
-const githubContext = createContext();
+const githubContext = createContext()
 
-export default githubContext;
+export default githubContext

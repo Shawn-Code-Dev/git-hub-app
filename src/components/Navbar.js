@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
+import { Link } from 'react-router-dom'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = ({ icon, title }) => {
 
@@ -25,7 +25,7 @@ const Navbar = ({ icon, title }) => {
           <ThemeToggle />
         </ul>
       </nav>
-    );
+    )
 }
 
 Navbar.defaultProps = {

@@ -13,7 +13,7 @@ const themeReducer = (state, action) => {
         darkMode: true
       }
     default:
-      return state;
+      return state
   }
 }
 

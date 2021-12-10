@@ -7,12 +7,11 @@ const ThemeToggle = () => {
 
   const handleClick = () => {
     darkMode ? setLightMode() : setDarkMode()
-    console.log(darkMode)
   }
 
   return (
-    <button onClick={handleClick}>
-      {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+    <button onClick={handleClick} className='theme'>
+      {darkMode ? "☀️" : "🌙"}
     </button>
   )
 }

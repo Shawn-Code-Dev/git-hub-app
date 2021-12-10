@@ -38,8 +38,8 @@ const githubReducer = (state, action) => {
         loading: true
       }
     default:
-      return state;
+      return state
   }
 }
 
-export default githubReducer;
+export default githubReducer

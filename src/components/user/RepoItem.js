@@ -8,4 +8,4 @@ const RepoItem = ({repo}) => {
   )
 }
 
-export default RepoItem;
+export default RepoItem

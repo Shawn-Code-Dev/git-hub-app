@@ -2,9 +2,9 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #dc3545;
+  --primary-color: #356fdc;
   --dark-color: #333333;
-  --light-color: #f4f4f4;
+  --light-color: #f4f4f4ce;
   --danger-color: #dc3545;
   --success-color: #28a745;
 }
@@ -13,6 +13,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.App {
+  height: 100vh;
 }
 
 body {
@@ -232,6 +236,11 @@ img {
   margin-right: 0.2rem;
 }
 
+.theme {
+  background-color: var(--primary-color);
+  border: none;
+}
+
 .badge {
   display: inline-block;
   font-size: 0.8rem;
@@ -304,7 +313,6 @@ img {
   opacity: 0.8;
 }
 
-.bg-light,
 .badge-light {
   border: #ccc solid 1px;
 }
