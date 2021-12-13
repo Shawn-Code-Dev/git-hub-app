@@ -8,7 +8,7 @@ const UserCard = ({user: {login, avatar_url, html_url, repos_url}}) => {
   const { darkMode } = themeContext
 
   return (
-    <div className='card text-center user-card'>
+    <div className={`${darkMode ? 'card-dark' : 'card-light' } text-center user-card `}>
       <img src={avatar_url} alt='' className='round-img' style={{width:'60px'}} />
       <h3>{login}</h3>
       <div>

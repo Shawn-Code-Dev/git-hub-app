@@ -28,7 +28,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--success-color);
   text-decoration: none;
 }
 
@@ -114,15 +114,24 @@ img {
 }
 
 /* Cards */
-.card {
+.card-dark {
   padding: 1rem;
-  border: #ccc 1px dotted;
+  border: 2px outset grey;
   margin: 0.7rem 0;
+  background-color: rgb(75, 75, 75);
+  transition:all 0.1s;
+}
+
+.card-light {
+  padding: 1rem;
+  border: 2px outset black;
+  margin: 0.7rem 0;
+  background-color: var(--light-color);
   transition:all 0.1s;
 }
 
 .user-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 

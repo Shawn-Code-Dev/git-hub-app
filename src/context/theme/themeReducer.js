@@ -3,7 +3,7 @@ import { LIGHTMODE, DARKMODE } from '../types'
 const themeReducer = (state, action) => {
   switch (action.type) {
     case LIGHTMODE:
-      localStorage.setItem('darkMode', false)
+      localStorage.removeItem('darkMode')
       return {
         ...state,
         darkMode: false
