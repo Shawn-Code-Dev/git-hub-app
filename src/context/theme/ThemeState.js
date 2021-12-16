@@ -1,25 +1,29 @@
-import React, { useReducer } from 'react'
-import { DARKMODE, LIGHTMODE } from '../types'
-import ThemeContext from './themeContext'
-import ThemeReducer from './themeReducer'
+import React, { useReducer } from "react";
+import { DARKMODE, LIGHTMODE } from "../types";
+import ThemeContext from "./themeContext";
+import ThemeReducer from "./themeReducer";
 
-const ThemeState = props => {
+const ThemeState = (props) => {
   const initialState = {
-    darkMode: localStorage.getItem('darkMode')
-  }
+    darkMode: localStorage.getItem("darkMode"),
+  };
 
-  const [state, dispatch] = useReducer(ThemeReducer, initialState)
+  const [state, dispatch] = useReducer(ThemeReducer, initialState);
 
-  const setDarkMode = () => dispatch({ type: DARKMODE })
-  const setLightMode = () => dispatch({ type: LIGHTMODE })
+  const setDarkMode = () => dispatch({ type: DARKMODE });
+  const setLightMode = () => dispatch({ type: LIGHTMODE });
 
-  return (<ThemeContext.Provider value={{
-    darkMode: state.darkMode,
-    setDarkMode,
-    setLightMode
-  }}>
-    {props.children}
-  </ThemeContext.Provider>)
-}
+  return (
+    <ThemeContext.Provider
+      value={{
+        darkMode: state.darkMode,
+        setDarkMode,
+        setLightMode,
+      }}
+    >
+      {props.children}
+    </ThemeContext.Provider>
+  );
+};
 
-export default ThemeState
+export default ThemeState;

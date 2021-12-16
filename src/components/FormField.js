@@ -1,17 +1,17 @@
-import React from 'react'
-import { ErrorMessage, useField } from 'formik'
+import React from "react";
+import { ErrorMessage, useField } from "formik";
 
 const FormField = ({ label, ...props }) => {
-  const [field, meta] = useField(props) //eslint-disable-line
+  const [field, meta] = useField(props); //eslint-disable-line
   return (
     <div>
-      <label htmlFor={field.name} className='label'>{label} </label>
+      <label htmlFor={field.name} className='label'>
+        {label}{" "}
+      </label>
       <ErrorMessage name={field.name} component='div' className='error' />
-      <input
-      {...field} {...props}
-      /> 
+      <input {...field} {...props} />
     </div>
-  )
-}
+  );
+};
 
-export default FormField
+export default FormField;

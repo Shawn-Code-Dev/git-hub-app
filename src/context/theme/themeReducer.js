@@ -1,22 +1,22 @@
-import { LIGHTMODE, DARKMODE } from '../types'
+import { LIGHTMODE, DARKMODE } from "../types";
 
 const themeReducer = (state, action) => {
   switch (action.type) {
     case LIGHTMODE:
-      localStorage.removeItem('darkMode')
+      localStorage.removeItem("darkMode");
       return {
         ...state,
-        darkMode: false
-      }
+        darkMode: false,
+      };
     case DARKMODE:
-      localStorage.setItem('darkMode', true)
+      localStorage.setItem("darkMode", true);
       return {
         ...state,
-        darkMode: true
-      }
+        darkMode: true,
+      };
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default themeReducer
+export default themeReducer;

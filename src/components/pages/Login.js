@@ -1,34 +1,38 @@
-import React, { useContext } from 'react'
-import { Formik, Form } from 'formik'
-import FormField from '../FormField'
-import loginSchema from '../../schemas/loginSchema'
-import ThemeContext from '../../context/theme/themeContext'
+import React, { useContext } from "react";
+import { Formik, Form } from "formik";
+import FormField from "../FormField";
+import loginSchema from "../../schemas/loginSchema";
+import ThemeContext from "../../context/theme/themeContext";
 
 const Login = () => {
-  const themeContext = useContext(ThemeContext)
-  const { darkMode } = themeContext
+  const themeContext = useContext(ThemeContext);
+  const { darkMode } = themeContext;
 
   return (
     <Formik
       initialValues={{
-        username: '',
-        password: ''
+        username: "",
+        password: "",
       }}
       validationSchema={loginSchema}
       //onSubmit={values => }
     >
-      {formik => (
+      {(formik) => (
         <div>
           <h1>Login</h1>
           <Form className='form'>
             <FormField label='Username' name='username' type='text' />
             <FormField label='Password' name='password' type='password' />
-            <input type='submit' value='Submit' className={`btn btn-block ${darkMode ? 'btn-light' : 'btn-dark'}`} />
+            <input
+              type='submit'
+              value='Submit'
+              className={`btn btn-block ${darkMode ? "btn-light" : "btn-dark"}`}
+            />
           </Form>
         </div>
       )}
     </Formik>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
